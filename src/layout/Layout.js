@@ -6,6 +6,7 @@ import {
 	navLinks,
 	navLinkItem,
 	navLinkText,
+	siteTitle,
 } from "../components/layout.module.css";
 
 const Layout = ({ pageTitle, children }) => {
@@ -24,7 +25,7 @@ const Layout = ({ pageTitle, children }) => {
 			<title>
 				{pageTitle} | {data.site.siteMetadata.title}
 			</title>
-			<header>{data.site.siteMetadata.title}</header>
+			<header className={siteTitle}>{data.site.siteMetadata.title}</header>
 			<nav>
 				<ul className={navLinks}>
 					<li className={navLinkItem}>
@@ -35,6 +36,11 @@ const Layout = ({ pageTitle, children }) => {
 					<li className={navLinkItem}>
 						<Link to="/About" className={navLinkText}>
 							About
+						</Link>
+					</li>
+					<li className={navLinkItem}>
+						<Link to="/BlogPage" className={navLinkText}>
+							Blog 
 						</Link>
 					</li>
 				</ul>
